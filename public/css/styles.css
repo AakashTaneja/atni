@@ -1,101 +1,201 @@
+/***************************TAG Selectors****************/
+h1 {
+    margin: 30px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 1px #232931;
+    font-size: 8rem;
+    color: #4ECCA3;
+}
 
-.twitterBox{
-    padding:15px;
+/***************************CLASS Selectors****************/
+
+
+/***************************Twitter and Koo****************/
+
+.twitter-koo-box{
+    padding:2px 5px;
     border-radius:1px;
     -webkit-border-radius:10px;
     cursor: pointer;   
     border-style: groove;
     border-width: 2px;
-    border-color: #1DA1F2;
-    margin-top: 5px;
+    margin-top: 3px;
+    height: 250px;
 }
 
-.twitterBox:hover{
-    background-color: #F5F8FA;
+.twitter-box{
+    border-color: #d0e7f5;
 }
 
-.twitterBioSection{
+.twitter-box:hover{
+    background-color: #ebf1f5;
+}
+
+.koo-box{
+    border-color: #f3edc8;
+}
+
+.koo-box:hover{
+    background-color: #f7f7e7;
+}
+
+.twitter-koo-biosection{
     display: flex;
 }
 
-.imgProfileTwitter{
+.twitter-koo-biopic{
+    display: flex;
+}
+
+.twitter-koo-img-profile{
     width : 50px;
     height: 50px; 
     border-radius: 50%;
 }
 
-.twitterBioText{
+.twitter-koo-biotext{
+    display: flex;
+    justify-content: space-between;
     font-family: Roboto;
+    font-size: 12px;
     align-items: center;
     justify-content: center;
     display: block;
     padding-left: 10px;
 }
 
-.twitterBioPic{
-    display: flex;
+.twitter-koo-logo{
+    width : 40px;
+    height: 40px; 
+    border-radius: 50%;
+    justify-content: end;
 }
 
 
-.twitterText{
-    font-size: 15px;
+
+.twitter-logo-with-media{
+    margin-left: 100px;
+}
+
+
+.twitter-koo-text{
+    font-size: .875 rem;
     line-height: 25px;
     font-family: Roboto; 
 }
 
+.tweet-image{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 
 
-/* News article css */
-.newsBox{
-    padding: 5px 10px;
+
+
+
+/***************************Headline and Inline****************/
+.headline-box{  
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius:1px;
-    -webkit-border-radius:10px;
+    background-color: #fafafa ; 
+    padding: 5px;
     cursor: pointer;    
-    width: auto;
-    border-style: groove;
-    border-width: 2px;
-    border-color: #F08080;
+    width: auto;  
 }
 
-.newsBox:hover{
-    background-color: #f7f1f1;
+.headline-box:hover{
+    background-color: #FAF9F6;
 }
 
-.siteLogo{
-    
-    width: 50px;
-    
+.site-logo-headline{
+    width: 80%;
 }
 
+.site-logo{   
+    width: 75px;
+    height: 25px;  
+}
 
+.headline-text{
+    font-family: 'Roboto:ital';
+    font-weight: bold;
+    font-size: 1.0rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
 
-.newsImage{ 
+.headline-image{ 
     width: 100px;
     justify-content: flex-end;
     border-radius:1px;
+    -webkit-border-radius:10px;    
+}
+
+.news-inline-box{
+    padding:2px 5px;
+    border-radius:1px;
     -webkit-border-radius:10px;
-    
+    cursor: pointer;   
+    border-style: groove;
+    border-width: 2px;
+    margin-top: 3px;
+    height: 250px;
+
+}
+
+.news-inline-box:hover{
+    background-color: #FAF9F6;
 }
 
 
+.news-box:hover{
+    background-color: #FAF9F6;
+}
 
-.newsText{
-    font-family: Roboto;
-    font-size: 20px;
-    align-items: center;
+.news-inline-image{
+    height: 120px;
+    display: flex;
+    margin: auto;
     justify-content: center;
-    width: 60%;
-    padding-left: 20px;
- 
+    border-radius:1px;
+    -webkit-border-radius:10px;
+}
+
+.news-inline-sitelogo{
+    width: 50px;
+    padding: 5px;
+}
+
+.news-inline-text{
+    font-size: .875 rem;
+    line-height: 25px;
+    font-family: Roboto; 
+}
+
+.instaImage{
+    height: 120px;
+}
+
+.youtube-box{
+    
+    border-radius:1px;
+    -webkit-border-radius:10px;
+    cursor: pointer;   
+    border-style: groove;
+    border-width: 2px;
+    border-color:#f7bebe;
+    margin-top: 3px;
+    height: 250px;
+    width: 250px;
+
 }
 
 
-
-
-.mastercarausal{
+.mastercarousel{
  
     border-style: groove;
     border-width: 2px;
@@ -105,5 +205,43 @@
     padding-bottom: 25px;
 }
 
+
+.arrowRight{
+    width: 30px;
+    position: relative; /* Declared position allows for location changes */
+    top: -20px; /* Moves the image 2px closer to the top of the page */
+    right: 10px;
+}
+.arrowRight:hover{
+    transform: scale(1.2);
+}
+
+.arrowLeft{
+    width: 30px;
+    position: relative; /* Declared position allows for location changes */
+    top: -20px; /* Moves the image 2px closer to the top of the page */
+    left: 5px;
+}
+.arrowLeft:hover{
+    transform: scale(1.2);
+}
+
+.slick-slide {
+    margin: 0px 4px;
+    
+}
+
+.margin-filler{
+    height: 25px;
+}
+
+
+/* Hide slider left and right images on small devices */
+@media (max-width: 767px) {
+    .hidden-mobile {
+      display: none;
+      display: hidden;
+    }
+  }
 
 

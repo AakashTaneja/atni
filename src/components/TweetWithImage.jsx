@@ -1,40 +1,41 @@
 import React from "react";
 
-function TweetWithImage(){
-    const tweetURL = "https://twitter.com/myogioffice/status/1508004254518185988";
-    const tweetText = "50 criminals surrender within 15 days of CM Shri @myogiadityanath Ji Maharaj storming back to power in UP.";
-    const profilePic = "https://pbs.twimg.com/profile_images/1390221022662594563/4abPNc6m_400x400.jpg";
-    const name= "Yogi Adityanath Office";
-    const handle = "@myogioffice";
-
+function TweetWithImage(props){
+    
 
 
     function handleClick(){
         //window.location.href = tweetURL;
         window.open( 
-            tweetURL, "_blank");
+            props.socialdata.tweetURL, "_blank");
     }
 
 
     return(
-        <div className="twitterBox">
+        <div className="twitter-koo-box twitter-box">
         
             
             <div onClick={handleClick} >
-            <div className="twitterBioSection">
-                <div className="twitterBioPic">
-                    <img className="imgProfileTwitter" src={profilePic} />
+            <div className="twitter-koo-biosection">
+                <div className="twitter-koo-biopic">
+                    <img className="twitter-koo-img-profile" src={props.socialdata.profilePic} />
                 </div>
-                <div className="twitterBioText">
-                     {name} 
+                <div className="twitter-koo-biotext">
+                     {props.socialdata.name} 
                      <br></br>
-                     {handle} 
+                     {props.socialdata.handle} 
                 </div>
                 
-            </div>
                 
-                <div className="twitterText">
-                    {tweetText}
+                <img className="twitter-koo-logo twitter-logo-with-media" src={props.socialdata.twitterLogo} />
+            </div>
+            
+                
+                <div className="twitter-koo-text">
+                    {props.socialdata.tweetText}
+                </div>
+                <div>
+                    <img className="tweet-image" src={props.socialdata.tweetImage}/>
                 </div>
                    
             </div>

@@ -1,40 +1,41 @@
 import React from "react";
 
-function Tweet(){
-    const tweetURL = "https://twitter.com/msisodia/status/1501960676939825153";
-    const tweetText = "The election results in Punjab have a clear message - The politics of our country is moving away from divide and rule to provide and rule. Congratulations India.";
-    const profilePic = "https://pbs.twimg.com/profile_images/1507737772529897476/qE4BNcjH_400x400.jpg";
-    const name= "Manish Sisodia";
-    const handle = "@msisiia";
-
-
-
+function Tweet(props){
     function handleClick(){
         //window.location.href = tweetURL;
         window.open( 
-            tweetURL, "_blank");
+            props.socialdata.tweetURL, "_blank");
     }
 
 
     return(
-        <div className="twitterBox">
+
+        <div className="twitter-koo-box twitter-box">
         
             
             <div onClick={handleClick} >
-            <div className="twitterBioSection">
-                <div className="twitterBioPic">
-                    <img className="imgProfileTwitter" src={profilePic} />
+            <div className="twitter-koo-biosection">
+                <div className="twitter-koo-biopic">
+                    <img className="twitter-koo-img-profile" src={props.socialdata.profilePic} />
                 </div>
-                <div className="twitterBioText">
-                     {name} 
-                     <br></br>
-                     {handle} 
+                <div className="twitter-koo-biotext">
+                    {props.socialdata.name} 
+                    <br></br>
+                    {props.socialdata.handle} 
                 </div>
+                <div className="twitter-koo-biotext">
+                
+                <div>
+                <img className="twitter-koo-logo" src={props.socialdata.twitterLogo} />
+                </div>
+                     
+                </div>
+                
                 
             </div>
                 
-                <div className="twitterText">
-                    {tweetText}
+                <div className="twitter-koo-text">
+                    {props.socialdata.tweetText}
                 </div>
                    
             </div>
