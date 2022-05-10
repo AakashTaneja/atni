@@ -1,2 +1,2 @@
 # atni
-news and social media aggregation app
+news and social media curation app
