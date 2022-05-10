@@ -1,8 +1,17 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import {Container, Row, Col} from "react-bootstrap";
+import {headlineLogoObject} from "../staticdata";
+import {findNewsPubName} from "./StringFunctions"
 
 function HeadLine(props){
+
+// var newsLogo = findNewsPubName(props.headline.newsURL);
+// var logo = "indianexpress";
+
+// const myJSON = JSON.stringify(headlineLogoObject);
+// console.log("logo url is "+headlineLogoObject[findNewsPubName(props.headline.newsURL)]);
+// console.log(JSON.stringify(headlineLogoObject,["indianexpress"]));
+
 
 function handleClick(){
     //window.location.href = tweetURL;
@@ -16,7 +25,7 @@ function handleClick(){
         {/* {alert(JSON.stringify(props))} */}
             <div className="site-logo-headline">
                 <div>
-                     <img className ="site-logo" src={props.headline.siteLogo}></img>
+                     <img className ="site-logo" src={headlineLogoObject[findNewsPubName(props.headline.newsURL)]}></img>
                 </div>
                 <div className="headline-text">
                     {props.headline.headlineText}

@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import Slider from "react-slick";
 
+
 function NextArrow(props){
-  const ARROW_next = "arrow_right.png";
+  const ARROW_next = "./arrow_right.png";
     const { className, style, onClick } = props;
   return (
     <div
@@ -10,7 +11,7 @@ function NextArrow(props){
         style={{...style, display: 'block'}}
         onClick={onClick}
     >
-        <img src={ARROW_next} className= "arrowRight hidden-mobile"  alt="arrow_right"/>
+       <img src={ARROW_next} className= "arrowRight hidden-mobile"  alt="arrow_right"/>
     </div>
 );
 

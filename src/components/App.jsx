@@ -1,33 +1,34 @@
 import React from "react";
-
-
-import 'bootstrap/dist/css/bootstrap.css';
-import {Container, Row, Col} from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
 import Capsule from "./Capsule";
 
 
-function App(){
+function App() {
 
-    
+
     return (
-    <div>
-    <h1>
-        and the news is
-    </h1>
-    <div>
-        <Capsule />
-    </div>
+        <Router>
+            
+            <Navbar />
+            <Routes>
+            <Route path="/" element={Capsule()}></Route>
+            <Route path="/about" element={<h1>about</h1>}></Route>
+               
+            
+            </Routes>
+            
+                
+           
+               
 
-    </div>
-    
-        
-
-   
+           
+        </Router>
     );
-       
- 
+
+
 }
 
 export default App;

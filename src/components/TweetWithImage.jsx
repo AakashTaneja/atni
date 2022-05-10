@@ -1,4 +1,6 @@
 import React from "react";
+import {headlineLogoObject} from "../staticdata";
+import {findNewsPubName} from "./StringFunctions";
 
 function TweetWithImage(props){
     
@@ -27,7 +29,7 @@ function TweetWithImage(props){
                 </div>
                 
                 
-                <img className="twitter-koo-logo twitter-logo-with-media" src={props.socialdata.twitterLogo} />
+                <img className="twitter-koo-logo twitter-logo-with-media" src={headlineLogoObject[findNewsPubName(props.socialdata.tweetURL)]} />
             </div>
             
                 

@@ -1,4 +1,6 @@
 import React from "react";
+import {headlineLogoObject} from "../staticdata";
+import {findNewsPubName} from "./StringFunctions";
 
 function Koo(props){
     function handleClick(){
@@ -19,7 +21,7 @@ function Koo(props){
                      {props.socialdata.handle} 
                 </div>
                 <div>
-                    <img className="twitter-koo-logo" src={props.socialdata.kooLogo} />
+                    <img className="twitter-koo-logo" src={headlineLogoObject["koo"]} />
                 </div>
 
             </div>

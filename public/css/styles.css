@@ -7,7 +7,23 @@ h1 {
     color: #4ECCA3;
 }
 
+.heading-main{
+    text-decoration: none;
+}
+
 /***************************CLASS Selectors****************/
+
+/***************************Capsule****************/
+
+.mastercarousel{
+ 
+    border-style: groove;
+    border-width: 2px;
+    border-color: lightgray;
+    border-radius:2px;
+    -webkit-border-radius:10px;
+    padding-bottom: 25px;
+}
 
 
 /***************************Twitter and Koo****************/
@@ -166,7 +182,7 @@ h1 {
 }
 
 .news-inline-sitelogo{
-    width: 50px;
+    width: 40px;
     padding: 5px;
 }
 
@@ -174,6 +190,7 @@ h1 {
     font-size: .875 rem;
     line-height: 25px;
     font-family: Roboto; 
+    display: inline;
 }
 
 .instaImage{
@@ -195,22 +212,16 @@ h1 {
 }
 
 
-.mastercarousel{
- 
-    border-style: groove;
-    border-width: 2px;
-    border-color: lightgray;
-    border-radius:2px;
-    -webkit-border-radius:10px;
-    padding-bottom: 25px;
-}
 
+/***************************Slider****************/
 
 .arrowRight{
     width: 30px;
     position: relative; /* Declared position allows for location changes */
-    top: -20px; /* Moves the image 2px closer to the top of the page */
-    right: 10px;
+    top: -35px; /* Moves the image 2px closer to the top of the page */
+    right: 5px;
+    background: white;
+    
 }
 .arrowRight:hover{
     transform: scale(1.2);
@@ -219,8 +230,9 @@ h1 {
 .arrowLeft{
     width: 30px;
     position: relative; /* Declared position allows for location changes */
-    top: -20px; /* Moves the image 2px closer to the top of the page */
-    left: 5px;
+    top: -35px; /* Moves the image 2px closer to the top of the page */
+    right: 5px;
+    background: white;
 }
 .arrowLeft:hover{
     transform: scale(1.2);
@@ -235,6 +247,8 @@ h1 {
     height: 25px;
 }
 
+
+/***************************Mobile****************/
 
 /* Hide slider left and right images on small devices */
 @media (max-width: 767px) {

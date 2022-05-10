@@ -6,10 +6,10 @@ import NextArrow from "./NextArrow";
 import PrevArrow from "./PrevArrow";
 import Tweet from "./Tweet";
 import TweetWithImage from "./TweetWithImage";
-import TweetWithVideo from "./TweetWithVideo";
 import Koo from "./Koo";
 import NewsInline from "./NewsInline";
 import Youtube from "./Youtube";
+import {lowerCase} from 'lodash';
 
 function SocialSlider(props){
     // console.log(JSON.stringify(props.socaildata));
@@ -27,23 +27,23 @@ function SocialSlider(props){
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
       };
-      console.log("this is social data type "+JSON.stringify(props.socaildata));
+      //console.log("this is social data type "+JSON.stringify(props.socaildata));
 
       
 
       const renderSlides = () =>
       
       Array.from(props.socaildata).map(socialitem=>  
-             
-        socialitem.type === "Tweet" ?
+        
+        lowerCase(socialitem.type) === lowerCase("Tweet") ?
         (<div style={{ width: 220 }}> <Tweet  socialdata={socialitem}/> </div> )
-        : socialitem.type === "TweetWithImage" ?
+        : lowerCase(socialitem.type) === lowerCase("TweetWithImage") ?
         (<div style={{ width: 300 }}> <TweetWithImage socialdata={socialitem}/> </div> )
-        : socialitem.type === "Koo" ?
+        : lowerCase(socialitem.type) === lowerCase("Koo") ?
         (<div style={{ width: 220 }}> <Koo socialdata={socialitem}/> </div> )
-        : socialitem.type === "Youtube" ?
+        : lowerCase(socialitem.type) === lowerCase("Youtube") ?
         (<div style={{ width: 250 }}> <Youtube socialdata={socialitem}/> </div> )
-        : socialitem.type === "NewsInline" ?
+        : lowerCase(socialitem.type) === lowerCase("NewsInline") ?
         (<div style={{ width: 250 }}> <NewsInline socialdata={socialitem}/> </div> )
         : (<div style={{ width: 1 }}> </div> )
     

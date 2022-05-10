@@ -1,7 +1,7 @@
 import React from "react";
 import TweetWithImage from "./TweetWithImage";
 import Koo from "./Koo";
-import NewsInline from "./NewsInine";
+import NewsInline from "./NewsInline";
 import Youtube from "./Youtube";
 
 
