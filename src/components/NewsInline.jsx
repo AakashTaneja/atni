@@ -1,6 +1,7 @@
 import React from "react";
 import {headlineLogoObject} from "../staticdata";
-import {findNewsPubName} from "./StringFunctions";
+import {findNewsPubName, subStringToMax} from "./StringFunctions";
+import _ from "lodash";
 
 function NewsInline(props){
 
@@ -13,20 +14,33 @@ function NewsInline(props){
             props.socialdata.newsInlineURL, "_blank");
     }
 
+    
+    function maxString(){
+        if(props.socialdata.newsInlineText.length > 92){
+            //console.log("cutting it");
+            props.socialdata.newsInlineText = _.truncate(props.socialdata.newsInlineText, {
+                'length': 92
+              })
+        }
+        
+    }
+    maxString();
+
 
     return(
+        
         <div className="news-inline-box" onClick={handleClick}>
         
-        
-            
-        <div className="">
-            <img className="news-inline-image" src={props.socialdata.newsInlineImage}/>
-        </div>
-        <div className="news-inline-text">
+         <div className="news-inline-text">
                 <img className ="news-inline-sitelogo" src={headlineLogoObject[findNewsPubName(props.socialdata.newsInlineURL)]}></img>
         
             {props.socialdata.newsInlineText}
         </div>
+            
+        <div className="twitter-koo-image-div">
+            <img className="tweet-image" src={props.socialdata.newsInlineImage}/>
+        </div>
+       
                 
             
             

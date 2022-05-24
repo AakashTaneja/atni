@@ -22,6 +22,17 @@ function findNewsPubName(props){
 
 }
 
+function subStringToMax(props){
+    if(props.string.length > props.maxLength){
+        console.log("cutting it ");
+        return props.string.subString(0, props.maxLength);
+    }
+    else{
+        return props.string
+    }
+}
+
 export {
-    findNewsPubName
+    findNewsPubName,
+    subStringToMax
   }

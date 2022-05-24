@@ -15,15 +15,13 @@ function SocialSlider(props){
     // console.log(JSON.stringify(props.socaildata));
     const settings = {
         className: "slider variable-width",
-        adaptiveHeight:true,
+        adaptiveHeight:false,
         dots: true,
         infinite: true,
-        slidesToScroll: 1,
         variableWidth: true,
         speed: 600,
         centerMode: false,
         slidesToScroll: 1,
-        focusOnSelect: true,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
       };
@@ -38,13 +36,13 @@ function SocialSlider(props){
         lowerCase(socialitem.type) === lowerCase("Tweet") ?
         (<div style={{ width: 220 }}> <Tweet  socialdata={socialitem}/> </div> )
         : lowerCase(socialitem.type) === lowerCase("TweetWithImage") ?
-        (<div style={{ width: 300 }}> <TweetWithImage socialdata={socialitem}/> </div> )
+        (<div style={{ width: 275 }}> <TweetWithImage socialdata={socialitem}/> </div> )
         : lowerCase(socialitem.type) === lowerCase("Koo") ?
         (<div style={{ width: 220 }}> <Koo socialdata={socialitem}/> </div> )
         : lowerCase(socialitem.type) === lowerCase("Youtube") ?
         (<div style={{ width: 250 }}> <Youtube socialdata={socialitem}/> </div> )
         : lowerCase(socialitem.type) === lowerCase("NewsInline") ?
-        (<div style={{ width: 250 }}> <NewsInline socialdata={socialitem}/> </div> )
+        (<div style={{ width: 275 }}> <NewsInline socialdata={socialitem}/> </div> )
         : (<div style={{ width: 1 }}> </div> )
     
       );

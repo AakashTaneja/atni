@@ -7,6 +7,7 @@ const newsModel = require('../models/newsModel')
 //access, public
 const getAllNews = asyncHandler(async (req, res) => {
     const news = await newsModel.find();
+    console.log("getAllNews "+req.path);
     res.json(news);
    
 })

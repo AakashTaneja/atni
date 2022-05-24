@@ -4,28 +4,32 @@ import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import Capsule from "./Capsule";
+import About from "./About";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import Navbar2 from "./Navbar2";
+import Margin from "./Margin";
 
 
 function App() {
 
 
     return (
-        <Router>
+        <div className="master-div"> 
+            <Router>
             
-            <Navbar />
+            <Navbar2 />
+            
             <Routes>
             <Route path="/" element={Capsule()}></Route>
-            <Route path="/about" element={<h1>about</h1>}></Route>
-               
-            
+            <Route path="/about" element={About()}></Route>
+            <Route path="/contact" element={Contact()}></Route>
             </Routes>
-            
-                
-           
-               
-
-           
+            <Footer />
         </Router>
+        </div>
+        
+       
     );
 
 

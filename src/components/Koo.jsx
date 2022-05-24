@@ -20,7 +20,10 @@ function Koo(props){
                      <br></br>
                      {props.socialdata.handle} 
                 </div>
-                <div>
+                <div className="filler-div-tweet">
+
+                </div>
+                <div className="twitter-koo-logo-div">
                     <img className="twitter-koo-logo" src={headlineLogoObject["koo"]} />
                 </div>
 

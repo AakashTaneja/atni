@@ -16,7 +16,7 @@ function SlidesGenerator(){
      <div style={{ width: 220 }}>
         <Koo /> 
      </div>
-     <div style={{ width: 250 }}>
+     <div style={{ width: 300 }}>
         <NewsInline /> 
      </div>
      <div style={{ width: 250 }}>

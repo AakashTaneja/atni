@@ -21,11 +21,12 @@ import Margin from "./Margin";
 function Capsule(){
     const [newsDataFromDB, setnewsDataFromDB] = React.useState(null);
     React.useEffect(() => {
-        fetch('http://localhost:3001/api/news')
+        fetch('http://192.168.1.9:3001/api/news')
         .then(res => {
             return res.json();
         })
         .then((data) =>{
+            data.sort((a, b) => a.index - b.index);
             setnewsDataFromDB(data);
         })
     }, []);
@@ -37,7 +38,7 @@ function Capsule(){
            {newsDataFromDB && newsDataFromDB.map(newsitem =>
            
            <div>
-            {alert(JSON.stringify(newsitem.headline))}
+            {/* {alert(JSON.stringify(newsitem.headline))} */}
             <Container className="mastercarousel" fluid="lg">
                     <Row>
                         <Col>
