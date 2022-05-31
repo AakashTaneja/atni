@@ -6,9 +6,13 @@ import NextArrow from "./NextArrow";
 import PrevArrow from "./PrevArrow";
 import Tweet from "./Tweet";
 import TweetWithImage from "./TweetWithImage";
+import TweetMuchText from "./TweetMuchText";
 import Koo from "./Koo";
+import KooWithImage from "./KooWithImage";
+import KooMuchText from "./KooMuchText";
 import NewsInline from "./NewsInline";
 import Youtube from "./Youtube";
+import EndSlide from "./EndSlide";
 import {lowerCase} from 'lodash';
 
 function SocialSlider(props){
@@ -37,44 +41,44 @@ function SocialSlider(props){
         (<div style={{ width: 220 }}> <Tweet  socialdata={socialitem}/> </div> )
         : lowerCase(socialitem.type) === lowerCase("TweetWithImage") ?
         (<div style={{ width: 275 }}> <TweetWithImage socialdata={socialitem}/> </div> )
+        : lowerCase(socialitem.type) === lowerCase("TweetMuchText") ?
+        (<div style={{ width: 300 }}> <TweetMuchText socialdata={socialitem}/> </div> )
         : lowerCase(socialitem.type) === lowerCase("Koo") ?
         (<div style={{ width: 220 }}> <Koo socialdata={socialitem}/> </div> )
+        : lowerCase(socialitem.type) === lowerCase("KooWithImage") ?
+        (<div style={{ width: 275 }}> <KooWithImage socialdata={socialitem}/> </div> )
+        : lowerCase(socialitem.type) === lowerCase("KooMuchText") ?
+        (<div style={{ width: 300 }}> <KooMuchText socialdata={socialitem}/> </div> )
         : lowerCase(socialitem.type) === lowerCase("Youtube") ?
         (<div style={{ width: 250 }}> <Youtube socialdata={socialitem}/> </div> )
         : lowerCase(socialitem.type) === lowerCase("NewsInline") ?
         (<div style={{ width: 275 }}> <NewsInline socialdata={socialitem}/> </div> )
         : (<div style={{ width: 1 }}> </div> )
+        
     
       );
+
+      const renderEndSlide = () =>
+
+      
+        (<div style={{ width: 60 }}> <EndSlide /> </div> )
+
+        
+    
+    
      
     return(
         
         <div>
-        <Slider {...settings}>
-        {renderSlides()}
-        
-
-    
-            {/* <div style={{ width: 300 }}>
-                <TweetWithImage /> 
-            </div>
-            <div style={{ width: 220 }}>
-                <Koo /> 
-            </div>
-            <div style={{ width: 250 }}>
-                <NewsInline /> 
-            </div>
-            <div style={{ width: 250 }}>
-                <Youtube /> 
-            </div>  */}
-           
-          
+            <Slider {...settings}>
+            {renderSlides()}
+            {renderEndSlide()}          
             </Slider>
 
-            <div>
+       
            
-            </div>
         </div>
+       
         
     );
 }

@@ -13,8 +13,8 @@ function Navbar2(){
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
                     
-                    <Nav.Link href="/About" style={{color:"orange"}}>About</Nav.Link>
-                    <Nav.Link href="/Contact" style={{color:"orange"}}>Contact</Nav.Link>
+                    <Nav.Link href="/about" style={{color:"orange"}}>About</Nav.Link>
+                    <Nav.Link href="/contact" style={{color:"orange"}}>Contact</Nav.Link>
                     
                 </Nav>
                 </Navbar.Collapse>

@@ -1,6 +1,6 @@
 import React from "react";
 import {headlineLogoObject} from "../staticdata";
-import {findNewsPubName} from "./StringFunctions";
+
 
 function Koo(props){
     function handleClick(){

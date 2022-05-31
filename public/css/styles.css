@@ -7,6 +7,11 @@ h1 {
     color: #4ECCA3;
 }
 
+h2 {
+    font-family: Roboto;
+    font-size: 12px;
+}
+
 .heading-main{
     text-decoration: none;
 }
@@ -15,9 +20,34 @@ h1 {
     width: 100%;
     
 }
+
+/***************************SECTION Selectors****************/
+
+#sidebar-left {
+    
+    float: left;
+    width: 10%;
+    background-color: red;
+    height: 100vh;
+    
+}
+
+#sidebar-right {
+    float: right;
+    width: 10%;
+    background-color: red;
+    
+    
+}
+
 /***************************CLASS Selectors****************/
 
 /***************************Capsule****************/
+
+.carousel{
+    margin-left: 3px;
+    margin-right: 3px;
+}
 
 .mastercarousel{
  
@@ -134,7 +164,7 @@ h1 {
 
 
 
-.tweet-image{
+.tweet-koo-inline-image{
     height: 120px;
     width: 95%;
     object-fit: fit;
@@ -169,6 +199,7 @@ h1 {
 .site-logo{   
     width: 75px;
     height: 25px;  
+   
 }
 
 .headline-text{
@@ -177,14 +208,16 @@ h1 {
     font-size: 1.0rem;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
+    
 }
 
 .headline-image{ 
     width: 100px;
+    height: 80px;
     justify-content: flex-end;
     border-radius:1px;
     -webkit-border-radius:10px;    
+    object-fit: fill;
 }
 
 .news-inline-box{
@@ -254,6 +287,7 @@ h1 {
 
 /***************************Slider****************/
 
+
 .arrowRight{
     width: 30px;
     position: relative; /* Declared position allows for location changes */
@@ -287,6 +321,8 @@ h1 {
 }
 
 
+
+
 /***************************Mobile****************/
 
 /* Hide slider left and right images on small devices */
@@ -307,14 +343,44 @@ h1 {
   }
 
   /***************************About and Contact****************/
-  .about{
+
+  .about-container{
+      padding-left: 0px;
+      padding-right: 0px;
+      display: flex;
+      justify-content: center;
+  }
+
+  
+.about{
     border-style: groove;
     border-width: 2px;
     border-color: lightgray;
     border-radius:2px;
     -webkit-border-radius:10px;
     padding-bottom: 25px;
+    padding-top: 15px;
+    
+    
 
+  }
+
+  .contactus{
+   
+    text-align: center;
+    
+    
+  }
+
+  .route-heading{
+    font-family: Roboto;
+    font-size: 25px;
+  }
+
+  .contactus-text{
+    font-family: Roboto;
+    font-size: 15px;
+    color: grey;
   }
 
 
@@ -338,6 +404,41 @@ h1 {
       padding-top:0px;
 
   }
+
+
+  .endslide{
+    cursor: pointer;   
+    -webkit-border-radius:10px;
+    border-style: groove;
+    border-width: 2px;
+    height: 250px;
+    border-color: orange;
+  }
+
+  .vericaltext{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.read-again-text{
+    font-family: 'Roboto:ital';
+    font-weight: normal;
+    font-size: 1.0rem;
+    margin: auto;
+    text-align: center;
+    
+    line-height: 100px;
+
+}
+.vertical-filler{
+    height: 30%;
+    margin-bottom: 35px;
+}
+
+.read-again-image{
+    width: 50px;
+    margin: auto;
+}
 
   
 

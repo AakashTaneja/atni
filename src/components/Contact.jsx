@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Row, Col} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 import Margin from "./Margin";
 
 function Contact(){
@@ -7,11 +7,14 @@ function Contact(){
     return(
         <div>
              <Container className="about" fluid="lg">
-                    <Row>
-                        <Col>
-                        <h1>yahan ping kar do</h1>
-                        </Col>
-                    </Row> 
+             <div className="contactus">
+                <div>
+                    <p className="route-heading">Contact Us</p>
+                </div>
+                <div className="contactus-text">
+                Want to get connected? email us at contact@andthenewsis.com
+                </div>
+             </div>
                     
                 </Container> 
                 <Margin />

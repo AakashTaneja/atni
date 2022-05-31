@@ -1,5 +1,3 @@
-import React from "react";
-
 const staticdata = {
     newssiteLogos:{
         indiatvnews: "https://static.indiatvnews.com/ins-web/images/lazy.jpg" ,

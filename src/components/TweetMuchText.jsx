@@ -3,7 +3,7 @@ import {headlineLogoObject} from "../staticdata";
 import {findNewsPubName} from "./StringFunctions";
 import _ from "lodash";
 
-function TweetWithImage(props){
+function TweetMuchText(props){
     
 
 
@@ -14,19 +14,12 @@ function TweetWithImage(props){
     }
 
     function maxString(){
-        if(props.socialdata.tweetText.length > 92){
-           // console.log("cutting it");
+        if(props.socialdata.tweetText.length > 275){
+            //console.log("cutting it");
             props.socialdata.tweetText = _.truncate(props.socialdata.tweetText, {
-                'length': 100
-              })  
+                'length': 275
+              })
         }
-
-        if(props.socialdata.name.length > 18){
-            // console.log("cutting it");
-             props.socialdata.name = _.truncate(props.socialdata.name, {
-                 'length': 18
-               })  
-         }
         
     }
     maxString();
@@ -46,7 +39,7 @@ function TweetWithImage(props){
                      <br></br>
                      {props.socialdata.handle} 
                 </div>
-                <div className="filler-div">
+                <div className="filler-div-tweet">
 
                 </div>
                 <div className="twitter-koo-logo-div">
@@ -61,9 +54,6 @@ function TweetWithImage(props){
                 <div className="twitter-koo-text">
                     {props.socialdata.tweetText}
                 </div>
-                <div className="twitter-koo-image-div">
-                    <img className="tweet-koo-inline-image" src={props.socialdata.tweetImage}/>
-                </div>
                    
             </div>
             
@@ -76,4 +66,4 @@ function TweetWithImage(props){
     );
 }
 
-export default TweetWithImage;
+export default TweetMuchText;

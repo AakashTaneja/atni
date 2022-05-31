@@ -2,7 +2,7 @@ import React from "react";
 // import newsdata from "../newsdata";
 // import newsdataJSON from "../newsdataJSON";
 //import resultsFromDB from "../Database";
-import HeadLine from "./HeadLine";
+import HeadLine from "./HeadLine.jsx";
 import {Container, Row, Col} from "react-bootstrap";
 import SocialSlider from "./SocialSlider";
 import Margin from "./Margin";
@@ -21,7 +21,7 @@ import Margin from "./Margin";
 function Capsule(){
     const [newsDataFromDB, setnewsDataFromDB] = React.useState(null);
     React.useEffect(() => {
-        fetch('http://192.168.1.9:3001/api/news')
+        fetch('http://192.168.1.7:3001/api/news')
         .then(res => {
             return res.json();
         })
@@ -34,7 +34,8 @@ function Capsule(){
     
     return(
         
-        <div>
+        <div className="carousel">
+             
            {newsDataFromDB && newsDataFromDB.map(newsitem =>
            
            <div>

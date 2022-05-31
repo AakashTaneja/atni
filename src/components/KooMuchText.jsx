@@ -1,9 +1,8 @@
 import React from "react";
 import {headlineLogoObject} from "../staticdata";
-import {findNewsPubName} from "./StringFunctions";
 import _ from "lodash";
 
-function TweetWithImage(props){
+function KooMuchText(props){
     
 
 
@@ -14,26 +13,19 @@ function TweetWithImage(props){
     }
 
     function maxString(){
-        if(props.socialdata.tweetText.length > 92){
-           // console.log("cutting it");
-            props.socialdata.tweetText = _.truncate(props.socialdata.tweetText, {
-                'length': 100
-              })  
+        if(props.socialdata.kooText.length > 275){
+            //console.log("cutting it");
+            props.socialdata.kooText = _.truncate(props.socialdata.kooText, {
+                'length': 275
+              })
         }
-
-        if(props.socialdata.name.length > 18){
-            // console.log("cutting it");
-             props.socialdata.name = _.truncate(props.socialdata.name, {
-                 'length': 18
-               })  
-         }
         
     }
     maxString();
 
 
     return(
-        <div className="twitter-koo-box twitter-box">
+        <div className="twitter-koo-box koo-box">
         
             
             <div onClick={handleClick} >
@@ -46,11 +38,11 @@ function TweetWithImage(props){
                      <br></br>
                      {props.socialdata.handle} 
                 </div>
-                <div className="filler-div">
+                <div className="filler-div-tweet">
 
                 </div>
                 <div className="twitter-koo-logo-div">
-                <img className="twitter-koo-logo twitter-logo-with-media" src={headlineLogoObject[findNewsPubName(props.socialdata.tweetURL)]} />
+                <img className="twitter-koo-logo twitter-logo-with-media" src={headlineLogoObject["koo"]} />
                 </div>
                 
                 
@@ -59,10 +51,7 @@ function TweetWithImage(props){
             
                 
                 <div className="twitter-koo-text">
-                    {props.socialdata.tweetText}
-                </div>
-                <div className="twitter-koo-image-div">
-                    <img className="tweet-koo-inline-image" src={props.socialdata.tweetImage}/>
+                    {props.socialdata.kooText}
                 </div>
                    
             </div>
@@ -76,4 +65,4 @@ function TweetWithImage(props){
     );
 }
 
-export default TweetWithImage;
+export default KooMuchText;

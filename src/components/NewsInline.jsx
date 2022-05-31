@@ -16,10 +16,10 @@ function NewsInline(props){
 
     
     function maxString(){
-        if(props.socialdata.newsInlineText.length > 92){
+        if(props.socialdata.newsInlineText.length > 100){
             //console.log("cutting it");
             props.socialdata.newsInlineText = _.truncate(props.socialdata.newsInlineText, {
-                'length': 92
+                'length': 100 
               })
         }
         
@@ -38,7 +38,7 @@ function NewsInline(props){
         </div>
             
         <div className="twitter-koo-image-div">
-            <img className="tweet-image" src={props.socialdata.newsInlineImage}/>
+            <img className="tweet-koo-inline-image" src={props.socialdata.newsInlineImage}/>
         </div>
        
                 

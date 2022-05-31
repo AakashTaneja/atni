@@ -3,7 +3,7 @@ import {headlineLogoObject} from "../staticdata";
 import {findNewsPubName} from "./StringFunctions";
 import _ from "lodash";
 
-function TweetWithImage(props){
+function KooWithImage(props){
     
 
 
@@ -14,9 +14,9 @@ function TweetWithImage(props){
     }
 
     function maxString(){
-        if(props.socialdata.tweetText.length > 92){
+        if(props.socialdata.kooText.length > 100){
            // console.log("cutting it");
-            props.socialdata.tweetText = _.truncate(props.socialdata.tweetText, {
+            props.socialdata.kooText = _.truncate(props.socialdata.kooText, {
                 'length': 100
               })  
         }
@@ -33,7 +33,7 @@ function TweetWithImage(props){
 
 
     return(
-        <div className="twitter-koo-box twitter-box">
+        <div className="twitter-koo-box koo-box">
         
             
             <div onClick={handleClick} >
@@ -50,7 +50,7 @@ function TweetWithImage(props){
 
                 </div>
                 <div className="twitter-koo-logo-div">
-                <img className="twitter-koo-logo twitter-logo-with-media" src={headlineLogoObject[findNewsPubName(props.socialdata.tweetURL)]} />
+                <img className="twitter-koo-logo twitter-logo-with-media" src={headlineLogoObject["koo"]} />
                 </div>
                 
                 
@@ -59,10 +59,10 @@ function TweetWithImage(props){
             
                 
                 <div className="twitter-koo-text">
-                    {props.socialdata.tweetText}
+                    {props.socialdata.kooText}
                 </div>
                 <div className="twitter-koo-image-div">
-                    <img className="tweet-koo-inline-image" src={props.socialdata.tweetImage}/>
+                    <img className="tweet-koo-inline-image" src={props.socialdata.kooImage}/>
                 </div>
                    
             </div>
@@ -76,4 +76,4 @@ function TweetWithImage(props){
     );
 }
 
-export default TweetWithImage;
+export default KooWithImage;
